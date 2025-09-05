@@ -1,0 +1,1172 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color palette - warm and calm */
+:root {
+    --bg-warm: #fefdf8;          /* warm off-white */
+    --bg-light: #f9f8f3;        /* subtle cream */
+    --text-primary: #2c2826;     /* warm dark brown */
+    --text-secondary: #5a544e;   /* muted brown */
+    --accent: #8b6f47;           /* warm brown accent */
+    --link: #6b4423;             /* darker brown for links */
+    --border: #e8e4db;           /* subtle warm border */
+    --code-bg: #f4f2ed;          /* warm code background */
+}
+
+body {
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-warm);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+    color: var(--text-primary);
+}
+
+h1 { font-size: 1.6em; margin-bottom: 0.8em; }
+h2 { font-size: 1.4em; margin-top: 1.5em; }
+h3 { font-size: 1em; margin-top: 1.2em; }
+
+p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Links */
+a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--link);
+}
+
+/* Header */
+.site-header {
+    background-color: var(--bg-warm);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand-name a {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--text-primary);
+    border: none;
+    line-height: 1.2;
+}
+
+.brand-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 0.2em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-size: 1em;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+    border: none;
+}
+
+/* Main content */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+/* Home page specific */
+.home-intro {
+    margin-bottom: 3rem;
+}
+
+.home-intro h1 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.welcome-text {
+    font-size: .9em;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.profile-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(44, 40, 38, 0.1);
+}
+
+/* Code elements - subtle nerdiness */
+code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: var(--text-primary);
+}
+
+pre {
+    background-color: var(--code-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    border-left: 3px solid var(--accent);
+    margin: 1.5rem 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Research/Publication lists */
+.publication-item,
+.research-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.publication-item:last-child,
+.research-item:last-child {
+    border-bottom: none;
+}
+
+.publication-title {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+}
+
+.publication-meta {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact section */
+.contact-info {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-links a {
+    border: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+.social-links svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-brand {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .profile-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .main-content {
+        padding: 0 1rem;
+    }
+}
+
+/* Subtle data viz accent - very minimal */
+.data-accent {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.data-accent::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+/* Academic status indicator */
+.status-badge {
+    display: inline-block;
+    background-color: var(--bg-light);
+    color: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+/* CV-specific styles */
+.cv-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.cv-page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.cv-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    border: none !important;
+}
+
+.cv-download-link:hover {
+    background-color: var(--link);
+    border: none !important;
+}
+
+.cv-download-link-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease;
+    border: none !important;
+    margin: 0 0.2rem;
+}
+
+.cv-download-link-inline:hover {
+    background-color: var(--link);
+    border: none !important;
+}
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* CV Navigation Sidebar */
+.cv-navigation {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    position: sticky;
+    top: 2rem;
+}
+
+.cv-navigation h3 {
+    color: var(--accent);
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.cv-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.cv-nav-list li {
+    margin-bottom: 0.5rem;
+}
+
+.cv-nav-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s ease;
+    border: none;
+}
+
+.cv-nav-list a:hover {
+    color: var(--accent);
+    border: none;
+}
+
+.cv-note {
+    background-color: var(--bg-warm);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.cv-note p {
+    margin-bottom: 0.5rem;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+}
+
+.cv-note p:last-child {
+    margin-bottom: 0;
+}
+
+.cv-note strong {
+    color: var(--accent);
+}
+
+/* PDF Viewer */
+.cv-viewer {
+    min-height: 800px;
+}
+
+.pdf-container {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+
+.pdf-container iframe {
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+.cv-viewer-note {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cv-viewer-text {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+.cv-viewer-text p {
+    margin: 0;
+}
+
+.cv-viewer-text a {
+    color: var(--link);
+    font-weight: 500;
+}
+
+.cv-download-link-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #7a6b5d;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    border: none !important;
+    white-space: nowrap;
+}
+
+.cv-download-link-right:hover {
+    background-color: var(--accent);
+    border: none !important;
+}
+
+/* Legacy CV styles for compatibility */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.cv-section {
+    margin-bottom: 3rem;
+}
+
+.cv-section h2 {
+    color: var(--accent);
+    font-size: 1.5em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-subsection {
+    color: var(--text-primary);
+    font-size: 1.1em;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.cv-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cv-item-header h3 {
+    color: var(--text-primary);
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.cv-date {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cv-institution {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.cv-details {
+    margin-top: 0.5rem;
+}
+
+.cv-details p {
+    margin-bottom: 0.5rem;
+}
+
+.cv-publication {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--bg-light);
+}
+
+.cv-presentation {
+    margin-bottom: 1rem;
+}
+
+.cv-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-category h4 {
+    color: var(--accent);
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-category p {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.cv-references-note {
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Mobile responsiveness for CV */
+@media (max-width: 768px) {
+    .pdf-container iframe {
+        height: 600px;
+    }
+    
+    .cv-viewer-note {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .cv-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .cv-skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Research page styles */
+.research-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.research-intro {
+    font-size: .9em;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+    max-width: 740px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Change to 350 for tiles next to each other */ 
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.research-tile {
+    background: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 300px;
+}
+
+.research-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(44, 40, 38, 0.15);
+}
+
+.tile-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.research-tile:hover .tile-image img {
+    filter: grayscale(0%) contrast(1.05);
+    transform: scale(1.05);
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(44, 40, 38, 0.1) 0%,
+        rgba(44, 40, 38, 0.3) 50%,
+        rgba(44, 40, 38, 0.8) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.research-tile:hover .tile-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(44, 40, 38, 0.2) 0%,
+        rgba(44, 40, 38, 0.4) 50%,
+        rgba(44, 40, 38, 0.85) 100%
+    );
+}
+
+.tile-content {
+    width: auto;
+    text-align: left;
+    max-width: 100%;
+}
+
+.tile-content h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tile-content > p {
+    font-size: 1em;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.tile-details {
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    backdrop-filter: none;
+    display: none;
+}
+
+.research-tile:hover .tile-details {
+    display: block;
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tile-details p {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.research-keywords {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.8rem;
+}
+
+.keyword {
+    color: #f4f2ed;
+    font-size: 0.7em;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.keyword:hover {
+    color: white;
+}
+
+.keyword-separator {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7em;
+    margin: 0 0.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.keyword-link {
+    color: #f4f2ed;
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.keyword-link:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+/* Mobile responsiveness for research */
+@media (max-width: 768px) {
+    .research-title {
+        font-size: 1.6em;
+    }
+    
+    .research-intro {
+        font-size: 1em;
+        margin-bottom: 3rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .research-tile {
+        min-height: 250px;
+    }
+    
+    .tile-image {
+        height: 250px;
+    }
+    
+    .tile-overlay {
+        padding: 1.5rem;
+    }
+}
+
+/* Contact page styles - clean and simple */
+.contact-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.contact-methods {
+    margin-bottom: 5rem;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-line:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-line svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 80px;
+}
+
+.contact-line a {
+    color: var(--link);
+    font-weight: 500;
+}
+
+.address-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.address-block h3 {
+    color: var(--text-primary);
+    font-size: 1.1em;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.address-block p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+/* Mobile responsiveness for contact */
+@media (max-width: 768px) {
+    .address-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-line {
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+    
+    .contact-label {
+        min-width: auto;
+    }
+}
+
+/* Publications page styles */
+.publications-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.pub-section {
+    margin-bottom: 4rem;
+}
+
+.pub-section h2 {
+    color: var(--accent);
+    font-size: 1.3em;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.publication-item,
+.presentation-item,
+.wip-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.publication-item:last-child,
+.presentation-item:last-child,
+.wip-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pub-title {
+    color: var(--text-primary);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.pub-authors {
+    color: var(--text-secondary);
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.pub-venue {
+    color: var(--accent);
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.pub-description {
+    margin-top: 1rem;
+}
+
+.pub-description p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.research-note {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    border-left: 4px solid var(--accent);
+}
+
+.research-note p {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.research-note p:last-child {
+    margin-bottom: 0;
+}
+
+.research-note strong {
+    color: var(--accent);
+}
+
+/* Mobile responsiveness for publications */
+@media (max-width: 768px) {
+    .publications-title {
+        font-size: 1.6em;
+    }
+    
+    .pub-title {
+        font-size: 1.1em;
+    }
+    
+    .research-note {
+        padding: 1.5rem;
+    }
+}
+
+/* Teaching page styles */
+.teaching-title {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.teaching-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.teaching-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.teaching-section h2 {
+    color: var(--accent);
+    font-size: 1.3em;
+    margin-bottom: 2rem;
+}
+
+.teaching-item {
+    margin-bottom: 1.5rem;
+}
+
+.course-title {
+    color: var(--text-primary);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.course-details {
+    color: var(--text-secondary);
+    font-size: 0.95em;
+    font-style: italic;
+}
+
+.methods-consultation-box {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    border-left: 4px solid var(--accent);
+}
+
+.methods-consultation-box h3 {
+    color: var(--accent);
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.methods-consultation-box p {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.methods-consultation-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile responsiveness for teaching */
+@media (max-width: 768px) {
+    .teaching-title {
+        font-size: 1.6em;
+    }
+    
+    .methods-consultation-box {
+        padding: 1.5rem;
+    }
+}
+
+/* Research placeholder */
+.research-placeholder {
+    background: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.research-placeholder:hover {
+    opacity: 0.8;
+}
+
+.research-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) opacity(0.3);
+    transition: filter 0.3s ease;
+}
+
+.research-placeholder:hover img {
+    filter: grayscale(80%) opacity(0.5);
+}
+
+/* Alternative: If you prefer a simple text placeholder instead of image */
+.research-placeholder-text {
+    background: var(--bg-light);
+    border-radius: 12px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border);
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+/* Mobile responsiveness for placeholder */
+@media (max-width: 768px) {
+    .research-placeholder,
+    .research-placeholder-text {
+        height: 250px;
+    }
+}

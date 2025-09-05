@@ -1,0 +1,51 @@
+baseURL: 'https://sophiemainz.com'
+languageCode: 'en-us'
+title: 'Sophie Mainz - PhD Candidate'
+theme: 'academic-minimal'
+
+# Site parameters
+params:
+  author: 'Sophie Mainz'
+  description: 'PhD Candidate in Political Science at Uppsala University'
+  email: 'sophie.mainz@uu.se'
+  
+  # Social links (optional)
+  github: 'sophiemainz'
+  bluesky: 'sophiemainz.bsky.social'
+  
+  # Site settings
+  showReadingTime: false
+  showCodeLineNumbers: true
+  enableMathJax: true  # for mathematical notation
+  
+# Menu configuration
+menu:
+  main:
+    - name: "Research"
+      url: "/research/"
+      weight: 20
+    - name: "Publications"
+      url: "/publications/"
+      weight: 30
+    - name: "CV"
+      url: "/cv/"
+      weight: 40
+    - name: "Teaching"
+      url: "/teaching/"
+      weight: 50
+    - name: "Contact"
+      url: "/contact/"
+      weight: 60
+
+# Markup configuration for code highlighting
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: 'github'
+    lineNos: false
+
+# Build settings
+buildDrafts: false
+buildFuture: false
