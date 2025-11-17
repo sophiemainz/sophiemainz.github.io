@@ -184,7 +184,6 @@ pre code {
 .research-item {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
 }
 
 .publication-item:last-child,
@@ -961,7 +960,6 @@ pre code {
 .wip-item {
     margin-bottom: 2.5rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
 }
 
 .publication-item:last-child,
