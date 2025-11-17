@@ -182,8 +182,8 @@ pre code {
 /* Research/Publication lists */
 .publication-item,
 .research-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0rem;
 }
 
 .publication-item:last-child,
@@ -943,6 +943,12 @@ pre code {
     margin-bottom: 3.5rem;
 }
 
+.pub-status {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.95em;
+}
+
 .pub-section {
     margin-bottom: 4rem;
 }
@@ -958,8 +964,8 @@ pre code {
 .publication-item,
 .presentation-item,
 .wip-item {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0rem;
 }
 
 .publication-item:last-child,
