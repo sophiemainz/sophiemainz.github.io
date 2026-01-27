@@ -7,14 +7,14 @@
 
 /* Color palette - warm and calm */
 :root {
-    --bg-warm: #FFFCF5;          /* warm off-white */
-    --bg-light: #FFFCF5;        /* subtle cream */
-    --text-primary: #1a1a1a;     /* warm dark brown */
+    --bg-warm: #fefdf8;          /* warm off-white */
+    --bg-light: #f9f8f3;        /* subtle cream */
+    --text-primary: #2c2826;     /* warm dark brown */
     --text-secondary: #5a544e;   /* muted brown */
-    --accent: #1a1a1a;           /* black */
-    --link: #664532;             /* darker red for links */
+    --accent: #8b6f47;           /* warm brown accent */
+    --link: #6b4423;             /* darker brown for links */
     --border: #e8e4db;           /* subtle warm border */
-    --code-bg: #FFFCF5;          /* warm code background */
+    --code-bg: #f4f2ed;          /* warm code background */
 }
 
 body {
