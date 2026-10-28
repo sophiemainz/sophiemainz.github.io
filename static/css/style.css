@@ -10,8 +10,8 @@
     --bg-warm: #fefdf8;          /* warm off-white */
     --bg-light: #f9f8f3;        /* subtle cream */
     --text-primary: #2c2826;     /* warm dark brown */
-    --text-secondary: #5a544e;   /* muted brown */
-    --accent: #8b6f47;           /* warm brown accent */
+    --text-secondary: #2c2826;   /* muted brown */
+    --accent: #2c2826;           /* warm brown accent */
     --link: #6b4423;             /* darker brown for links */
     --border: #e8e4db;           /* subtle warm border */
     --code-bg: #f4f2ed;          /* warm code background */
@@ -29,14 +29,15 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 0.5em;
-    color: var(--text-primary);
+    color: #000000;
 }
 
 h1 { font-size: 1.6em; margin-bottom: 0.8em; }
-h2 { font-size: 1.4em; margin-top: 1.5em; }
+h2 { font-size: 1.4em; margin-top: 1.5em; font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #000000; font-weight: 400; }
 h3 { font-size: 1em; margin-top: 1.2em; }
 
 p {
